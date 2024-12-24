@@ -16,9 +16,9 @@ const center = {
 }
 
 export default function MapComponent() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-  })
+  // const { isLoaded } = useLoadScript({
+  //   // googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+  // })
 
   const options = useMemo(() => ({
     disableDefaultUI: false,
