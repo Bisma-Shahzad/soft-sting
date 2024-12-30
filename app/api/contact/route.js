@@ -45,41 +45,60 @@
 // }
 
 import { Resend } from "resend";
-
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(request) {
-  try {
-    const formData = await request.formData();
-    const firstName = formData.get("firstName");
-    const lastName = formData.get("lastName");
-    const email = formData.get("email");
-    const phone = formData.get("phone");
-    const productIdea = formData.get("productIdea");
+// export async function POST(request) {
+//   try {
+//     const formData = await request.formData();
+//     const firstName = formData.get("firstName");
+//     const lastName = formData.get("lastName");
+//     const email = formData.get("email");
+//     const phone = formData.get("phone");
+//     const productIdea = formData.get("productIdea");
 
-    await resend.emails.send({
-      from: `Support <${process.env.EMAIL_USER}>`,
-      to: email, // Replace with your email
-      subject: `New Contact Form Submission from ${firstName} ${lastName}`,
-      reply_to: email,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong> ${productIdea}</p>
-      `,
-    });
+//     await resend.emails.send({
+//       from: `Support <${process.env.EMAIL_USER}>`,
+//       to: email, // Replace with your email
+//       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+//       reply_to: email,
+//       html: `
+//         <h2>New Contact Form Submission</h2>
+//         <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+//         <p><strong>Email:</strong> ${email}</p>
+//         <p><strong>Phone:</strong> ${phone}</p>
+//         <p><strong>Message:</strong> ${productIdea}</p>
+//       `,
+//     });
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return new Response(JSON.stringify({ error: "Failed to send email" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
+//     return new Response(JSON.stringify({ success: true }), {
+//       status: 200,
+//       headers: { "Content-Type": "application/json" },
+//     });
+//   } catch (error) {
+//     console.error("Error sending email:", error);
+//     return new Response(JSON.stringify({ error: "Failed to send email" }), {
+//       status: 500,
+//       headers: { "Content-Type": "application/json" },
+//     });
+//   }
+// }
+
+export async function POST(request, res) {
+	// rate limit
+	// authorization
+
+	const { email } = await request.json();
+
+	const { data, error } = await resend.emails.send({
+		from: "Acme <info@softsting.com>",
+		to: [email],
+		subject: "Thank you",
+		html: `<h2>New Contact Form Submission</h2>`,
+	});
+
+	if (error) {
+		return Response.json(error);
+	}
+
+	return Response.json({ message: "Email sent successfully" });
 }
