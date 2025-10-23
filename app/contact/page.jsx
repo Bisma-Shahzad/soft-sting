@@ -3,6 +3,10 @@ import ContactGetInTouch from "@/components/ContactGetInTouch";
 import SubHeader from "@/components/SubHeader";
 import React from "react";
 
+export const metadata = {
+  title: "Contact Us",
+};
+
 const Contact = () => {
   return (
     <div>

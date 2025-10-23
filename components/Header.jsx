@@ -29,19 +29,19 @@ const Header = () => {
     },
     { name: "ABOUT US", href: "/about" },
     { name: "OUR PROCESS", href: "/process" },
-    {
-      name: "PRICING",
-      href: "#pricing",
-      subItems: [
-        { name: "DIGITAL MARKETING", href: "#web-development" },
-        { name: "DESIGN", href: "#mobile-apps" },
-        { name: "WEB DEVELOPMENT", href: "#seo-services" },
-        { name: "ECOMMERCE", href: "#web-development" },
-        { name: "APP", href: "#mobile-apps" },
-        { name: "SEO", href: "#seo-services" },
-      ],
-    },
-    { name: "BLOG", href: "#blog" },
+    // {
+    //   name: "PRICING",
+    //   href: "#pricing",
+    //   subItems: [
+    //     { name: "DIGITAL MARKETING", href: "#web-development" },
+    //     { name: "DESIGN", href: "#mobile-apps" },
+    //     { name: "WEB DEVELOPMENT", href: "#seo-services" },
+    //     { name: "ECOMMERCE", href: "#web-development" },
+    //     { name: "APP", href: "#mobile-apps" },
+    //     { name: "SEO", href: "#seo-services" },
+    //   ],
+    // },
+    // { name: "BLOG", href: "#blog" },
     { name: "CONTACT US", href: "/contact" },
     { name: "PORTFOLIO", href: "/portfolio" },
   ];

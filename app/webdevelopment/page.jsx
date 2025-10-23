@@ -2,6 +2,10 @@ import SubHeader from "@/components/SubHeader";
 import WebDevelopmentContent from "@/components/WebDevelopmentContent";
 import React from "react";
 
+export const metadata = {
+  title: "Web Development",
+};
+
 const WebDevelopment = () => {
   return (
     <div>

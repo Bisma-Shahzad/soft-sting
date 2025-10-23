@@ -3,6 +3,10 @@ import PortfolioMenuBar from "@/components/PortfolioMenuBar";
 import SubHeader from "@/components/SubHeader";
 import React from "react";
 
+export const metadata = {
+  title: "Portfolio",
+};
+
 const Portfolio = () => {
   return (
     <div>

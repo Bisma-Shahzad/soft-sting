@@ -33,7 +33,7 @@ export default function BottomFooter() {
               className="w-auto h-8"
             />
             <div className="flex flex-col gap-2 text-sm text-gray-300">
-              <span className="pt-2">SoftStings | All Rights Reserved | Copyrights 2021-22</span>
+              <span className="pt-2">SoftStings | All Rights Reserved | Copyrights 2021-{new Date().getFullYear()}</span>
               <div className="flex items-start gap-2 ">
                 <Link href="https://www.softstings.com" className="hover:text-[#ff5733] transition-colors">
                   www.softstings.com

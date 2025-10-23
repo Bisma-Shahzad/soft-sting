@@ -2,6 +2,10 @@ import DesignContent from "@/components/DesignContent";
 import SubHeader from "@/components/SubHeader";
 import React from "react";
 
+export const metadata = {
+  title: "Design",
+};
+
 const Design = () => {
   return (
     <div>

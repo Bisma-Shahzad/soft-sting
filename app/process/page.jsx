@@ -3,6 +3,10 @@ import ProcessWorkFlows from "@/components/ProcessWorkFlows";
 import SubHeader from "@/components/SubHeader";
 import React from "react";
 
+export const metadata = {
+  title: "Our Process",
+};
+
 const OurProcess = () => {
   return (
     <div>

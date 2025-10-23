@@ -2,6 +2,10 @@ import SeoContent from "@/components/SeoContent";
 import SubHeader from "@/components/SubHeader";
 import React from "react";
 
+export const metadata = {
+  title: "SEO",
+};
+
 const Seo = () => {
   return (
     <div>

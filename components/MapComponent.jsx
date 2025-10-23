@@ -16,9 +16,30 @@ const center = {
 }
 
 export default function MapComponent() {
-  // const { isLoaded } = useLoadScript({
-  //   // googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-  // })
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+  const forceEmbed = process.env.NEXT_PUBLIC_FORCE_MAP_EMBED === '1'
+  const address = encodeURIComponent("4407 Woodvalley Dr Houston Texas, 77096, USA")
+
+  // If no API key is provided OR embed is forced, render a free embed that doesn't require a key
+  if (!apiKey || forceEmbed) {
+    return (
+      <div className="w-full h-[300px] rounded-lg overflow-hidden">
+        <iframe
+          title="SoftStings Location"
+          src={`https://www.google.com/maps?q=${address}&output=embed`}
+          width="100%"
+          height="300"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
+    )
+  }
+
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: apiKey
+  })
 
   const options = useMemo(() => ({
     disableDefaultUI: false,
@@ -68,4 +89,3 @@ export default function MapComponent() {
     </div>
   )
 }
-

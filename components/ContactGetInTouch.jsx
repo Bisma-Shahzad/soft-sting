@@ -36,7 +36,7 @@ const ContactGetInTouch = () => {
               <div>
                 <h2 className="text-[18px] text-[#616161]">Visit Us</h2>
                 <p className="text-[#616161]">
-                  2064 Bluestem Drive, Conroe, Texas, 77384, USA Soft Stings, LLC
+                  4407 Woodvalley Dr Houston Texas, 77096, USA
                 </p>
               </div>
             </div>
@@ -56,7 +56,7 @@ const ContactGetInTouch = () => {
               <div>
                 <h2 className="text-[18px] text-[#616161]">Mail Us:</h2>
                 <p className="text-[#616161]">
-                  2064 Bluestem Drive, Conroe, Texas, 77384, USA Soft Stings, LLC
+                  4407 Woodvalley Dr Houston Texas, 77096, USA
                 </p>
               </div>
             </div>

@@ -4,6 +4,10 @@ import SubHeader from '@/components/SubHeader'
 import WhatPeopleSay from '@/components/WhatPeopleSay'
 import React from 'react'
 
+export const metadata = {
+  title: 'About Us',
+}
+
 const AboutPage = () => {
   return (
     <div>
