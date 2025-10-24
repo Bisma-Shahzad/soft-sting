@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import ContactFormUI from "./ContactForm";
+import { useRouter } from "next/navigation";
 
 
 const MobileContent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="px-4">
@@ -98,7 +100,7 @@ const MobileContent = () => {
             service with our app development teams.
           </p>
           <button className="bg-[#FF4A17] text-white mt-6 py-3 px-6 rounded hover:bg-black transition"
-          onClick={() => setIsModalOpen(true)}>
+          onClick={() => router.push('/contact')}>
             GET IN TOUCH
           </button>
         </div>

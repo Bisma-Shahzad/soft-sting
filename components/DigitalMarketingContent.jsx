@@ -103,7 +103,7 @@ const DigitalMarketingContent = () => {
             Our team offers organic marketing which includes social media marketing, blog posts, guest posts, etc. It drives traffic without spending money directly on paid ads. In contrast, inorganic marketing involves paid ads on YouTube, Google Ads, or any social media platform. Paid ads give you instant results. Marketers pivot and adjust your campaigns in a way that is most beneficial to you.
           </p>
           <Button className="bg-[#FF4A17] mt-4 py-7 px-8 hover:bg-black mx-auto lg:mx-0"
-            onClick={() => setIsModalOpen(true)}>
+            onClick={() => router.push('/contact')}>
             GET IN TOUCH
           </Button>
         </div>

@@ -98,7 +98,7 @@ const SeoContent = () => {
           </p>
 
           <Button className="bg-[#FF4A17] mt-4 py-7 px-8 hover:bg-black"
-          onClick={() => setIsModalOpen(true)}>
+          onClick={() => router.push('/contact')}>
             GET IN TOUCH
           </Button>
         </div>

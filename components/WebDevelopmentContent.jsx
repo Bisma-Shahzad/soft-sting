@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import ContactFormUI from "./ContactForm";
+import { useRouter } from "next/navigation";
 
 const WebDevelopmentContent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div>
@@ -71,7 +73,7 @@ const WebDevelopmentContent = () => {
           </p>
 
           <Button className="bg-[#FF4A17] mt-4 py-7 px-8 hover:bg-black"
-          onClick={() => setIsModalOpen(true)}>
+          onClick={() => router.push('/contact')}>
             GET IN TOUCH
           </Button>
         </div>

@@ -14,17 +14,17 @@ const ExperianceNumber = () => {
             className="text-[#FF4A17] text-[72px] text-center"
             style={{ color: "#FF4A17" }}
           >
-            500+
+            375
           </h1>
           <p className="text-white  text-[14px]">TRUSTED CLIENTS</p>
         </div>
 
         <div className="text-center">
-          <h1 className="text-[#FF4A17] text-[72px] text-center">50+</h1>
+          <h1 className="text-[#FF4A17] text-[72px] text-center">32</h1>
           <p className="text-white  text-[14px] ">VISITED CONFERENCES</p>
         </div>
         <div className="text-center">
-          <h1 className="text-[#FF4A17] text-[72px] text-center">20+</h1>
+          <h1 className="text-[#FF4A17] text-[72px] text-center">13</h1>
           <p className="text-white  text-[14px]">MASTER CERTIFICATION</p>
         </div>
       </div>
