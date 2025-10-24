@@ -10,6 +10,12 @@ import News from "@/components/News";
 import FormWithCard from "@/components/FormWithCard";
 import AutoServicesCarousel from "@/components/Carousel";
 
+export const metadata = {
+  title: {
+    absolute: "Digital Marketing | Mobile App Development | Payroll Outsourcing | Web Development |",
+  },
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen">

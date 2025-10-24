@@ -14,8 +14,8 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-[#ff5733] mt-1" />
               <div>
-                <p>2064 Bluestem Dr</p>
-                <p>Conroe, TX 77384</p>
+                <p>4407 Woodvalley Dr</p>
+                <p>Houston Texas, 77096, USA</p>
               </div>
             </div>
 
